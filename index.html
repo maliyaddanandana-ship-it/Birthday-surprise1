@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprise for Her</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #ffe6e6; padding-top: 50px; }
+        #content { display: none; }
+        .hidden { display: none; }
+        img { width: 300px; border-radius: 20px; animation: bounce 2s infinite; }
+        
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-30px);} 60% {transform: translateY(-15px);} }
+    </style>
+</head>
+<body>
+
+    <div id="login">
+        <h2>ආදරණීය, මේක ඔයා වෙනුවෙන්මයි!</h2>
+        <input type="password" id="password" placeholder="මුරපදය ඇතුළත් කරන්න">
+        <button onclick="checkPassword()">Open</button>
+    </div>
+
+    <div id="content">
+        <h1>සුබ උපන්දිනයක්! 🎂</h1>
+        <img src="photo.jpg" alt="Birthday Photo">
+        <br><br>
+        <audio controls autoplay>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var pass = document.getElementById("password").value;
+            if (pass == "2010112") {
+                document.getElementById("content").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("අයියෝ! වැරදි මුරපදයකි. නැවත උත්සාහ කරන්න.");
+            }
+        }
+    </script>
+</body>
+</html>
