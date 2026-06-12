@@ -1,0 +1,39 @@
+/* style.css ෆයිල් එකේ අන්තර්ගතය */
+body { 
+    text-align: center; 
+    background-color: #000000; 
+    color: #ffd700; 
+    font-family: 'Arial', sans-serif; 
+    padding: 20px; 
+    overflow-x: hidden; 
+}
+.container { 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px; 
+    border-radius: 15px; 
+    display: inline-block; 
+    margin-top: 50px; 
+    width: 90%; 
+    max-width: 600px; 
+    border: 1px solid #ffd700; 
+}
+h1, h2, h3 { color: #ffffff; }
+img, video { 
+    width: 100%; 
+    max-width: 300px; 
+    border-radius: 15px; 
+    border: 3px solid #ffd700; 
+    margin: 10px; 
+}
+input { padding: 10px; width: 250px; border-radius: 5px; border: 1px solid #ccc; }
+button { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    border: none; 
+    background-color: #ff4757; 
+    color: white; 
+}
+.heart { position: absolute; top: -10px; color: red; font-size: 20px; animation: fall linear forwards; }
+@keyframes fall { to { transform: translateY(100vh); } }
