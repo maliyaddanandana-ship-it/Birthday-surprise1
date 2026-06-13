@@ -35,3 +35,15 @@ img {
 }
 
 iframe { width: 90%; height: 250px; border: 2px solid #ffd700; border-radius: 10px; }
+.floating-item { 
+    position: fixed; /* 'absolute' වෙනුවට 'fixed' භාවිතා කරන්න */
+    top: -50px; 
+    font-size: 24px; 
+    animation: fall linear forwards; 
+    z-index: 1000;
+    pointer-events: none; /* හාට් නිසා වෙනත් බොත්තම් ඔබන්න අපහසු නොවීමට */
+}
+
+@keyframes fall { 
+    to { transform: translateY(110vh); } 
+}
