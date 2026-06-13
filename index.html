@@ -62,13 +62,18 @@
         function startHearts() {
     setInterval(() => {
         const item = document.createElement("div");
-        item.innerHTML = Math.random() > 0.5 ? "❤️" : "🎁"; // හාට් සහ තෑගි මාරුවෙන් මාරුවට
+        item.innerHTML = Math.random() > 0.5 ? "❤️" : "🎁";
         item.className = "floating-item";
-        item.style.left = Math.random() * 100 + "vw";
-        item.style.animationDuration = Math.random() * 3 + 2 + "s";
+        
+        // තිරයේ ඕනෑම තැනක වැටෙන්නට
+        item.style.left = Math.random() * 95 + "vw"; 
+        item.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        
         document.body.appendChild(item);
-        setTimeout(() => item.remove(), 5000);
-    }, 300);
+        
+        // වැටිලා ඉවර වුණාම අයින් කරන්න
+        setTimeout(() => item.remove(), 7000);
+    }, 500); // 500ms බැගින් එකක් වැටේ
 }
 
     </script>
