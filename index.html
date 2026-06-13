@@ -26,15 +26,12 @@
         <img src="IMG-20260611-WA0001.jpg" alt="IMG-20260611-WA0001.jpg">
         <img src="photo5.jpg" alt="Photo">
         <img src="photo6.jpg" alt="Photo">
+        <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/youtube_video_id" allowfullscreen></iframe>
+    <p style="color: #ff4757; font-weight: bold; margin-top: 10px;">මේ video එක අනිවාර්යයෙන්ම නරඹන්න!</p>
+</div>
+
         
-        <br>
-        <video controls><source src="5df2af1c-4e5d-4c79-8796-ffbacef10cd2.mp4" type="5df2af1c-4e5d-4c79-8796-ffbacef10cd2.mp4"></video>
-        <video controls><source src="video2.mp4" type="video/mp4"></video>
-        
-        <br>
-        <audio controls autoplay><source src="sigmamusicart-happy-birthday-258264.mp3" type="sigmamusicart-happy-birthday-258264.mp3"></audio>
-        
-        <br><br>
         <h3>මෙන්න ඔයාට පොඩි තෑග්ගක්!</h3>
         <input type="text" id="phone" placeholder="ඔයාගේ දුරකථන අංකය">
         <button onclick="sendReload()">Reload ලබාගන්න</button>
@@ -62,16 +59,17 @@
         }
 
         function startHearts() {
-            setInterval(() => {
-                const heart = document.createElement("div");
-                heart.innerHTML = "❤️";
-                heart.className = "heart";
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-                document.body.appendChild(heart);
-                setTimeout(() => heart.remove(), 5000);
-            }, 300);
-        }
+    setInterval(() => {
+        const item = document.createElement("div");
+        item.innerHTML = Math.random() > 0.5 ? "❤️" : "🎁"; // හාට් සහ තෑගි මාරුවෙන් මාරුවට
+        item.className = "floating-item";
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(item);
+        setTimeout(() => item.remove(), 5000);
+    }, 300);
+}
+
     </script>
 </body>
 </html>
