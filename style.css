@@ -3,45 +3,62 @@ body {
     background-color: #000000; 
     color: #ffd700; 
     font-family: 'Arial', sans-serif; 
-    padding: 0; /* padding 0 කරන්න */
+    padding: 0; 
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden; 
 }
 
-.container { 
-    background: rgba(255, 255, 255, 0.05); 
-    padding: 20px; 
-    width: 100%; /* සම්පූර්ණ තිරය සඳහා 100% */
-    max-width: 100%; /* max-width ඉවත් කරන්න */
-    box-sizing: border-box; /* padding සහ borders ඇතුළට ගැනීමට */
-    border: none; /* බෝඩර් එක ඉවත් කිරීමට */
-    margin-top: 0;
+/* මුල් පිටුව (Login) සඳහා */
+#login {
+    padding: 50px 20px;
 }
 
-/* පින්තූර පේළියට සකස් කිරීම */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+/* සියලුම Input සහ Button විශාල කිරීමට */
+input[type="password"], input[type="text"] {
+    width: 85%;
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
 }
 
-img { 
-    width: 45%; /* තිරයෙන් අඩක් පින්තූර දෙකකට */
-    max-width: 150px;
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* පින්තූර එකින් එක පහළට පෙළගැස්වීම */
+.container img { 
+    width: 90%; /* තිරයෙන් 90% ක් ලබා ගනී */
+    display: block; /* එකින් එක පහළට පෙළ ගැසේ */
+    margin: 15px auto; /* මැදට සහ පරතරය තබයි */
+    border-radius: 15px; 
+    border: 3px solid #ffd700; 
+    height: auto; /* ප්‍රමාණය ස්වයංක්‍රීයව වෙනස් වේ */
+}
+
+iframe { 
+    width: 90%; 
+    height: 250px; 
+    border: 3px solid #ffd700; 
     border-radius: 10px; 
-    border: 2px solid #ffd700; 
+    margin-bottom: 20px;
 }
 
-iframe { width: 90%; height: 250px; border: 2px solid #ffd700; border-radius: 10px; }
 .floating-item { 
-    position: fixed; /* 'absolute' වෙනුවට 'fixed' භාවිතා කරන්න */
+    position: fixed; 
     top: -50px; 
     font-size: 24px; 
     animation: fall linear forwards; 
     z-index: 1000;
-    pointer-events: none; /* හාට් නිසා වෙනත් බොත්තම් ඔබන්න අපහසු නොවීමට */
+    pointer-events: none; 
 }
 
 @keyframes fall { 
